@@ -36,9 +36,7 @@ WorkerSocket.prototype.send = function(data) {
 };
 
 WorkerSocket.prototype.close = function() {
-  this.socket_.postMessage({
-    close: true
-  });
+  this.socket_.terminate();
 };
 
 module.exports = WorkerSocket;
