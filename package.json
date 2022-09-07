@@ -1,7 +1,7 @@
 {
-  "name": "roslib",
-  "homepage": "https://www.robotwebtools.org",
-  "description": "The standard ROS Javascript Library",
+  "name": "@foxglove/roslibjs",
+  "homepage": "https://github.com/foxglove/roslibjs",
+  "description": "Fork of roslib",
   "version": "1.1.1",
   "license": "BSD-2-Clause",
   "main": "./build/roslib.js",
@@ -68,5 +68,8 @@
     "roslibjs",
     "robot"
   ],
-  "author": "Robot Webtools Team <robot-web-tools@googlegroups.com> (http://robotwebtools.org)"
+  "author": {
+    "name": "Foxglove Technologies",
+    "email": "support@foxglove.dev"
+  }
 }
