@@ -2,7 +2,7 @@
   "name": "@foxglove/roslibjs",
   "homepage": "https://github.com/foxglove/roslibjs",
   "description": "Fork of roslib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "BSD-2-Clause",
   "main": "./build/roslib.js",
   "browser": {
