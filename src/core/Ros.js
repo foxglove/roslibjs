@@ -148,7 +148,11 @@ Ros.prototype.callOnConnection = function(message) {
   if (this.transportOptions.encoder) {
     this.transportOptions.encoder(message, this._sendFunc);
   } else {
-    this._sendFunc(JSON.stringify(message));
+    // Ensure that typed arrays are encoded as arrays and not objects.
+    const replacer = (_key, value) => {
+      return ArrayBuffer.isView(value) ? Array.from(value) : value;
+    };
+    this._sendFunc(JSON.stringify(message), replacer);
   }
 };
 
