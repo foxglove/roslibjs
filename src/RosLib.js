@@ -19,10 +19,4 @@ assign(ROSLIB, require('./core'));
 
 assign(ROSLIB, require('./actionlib'));
 
-assign(ROSLIB, require('./math'));
-
-assign(ROSLIB, require('./tf'));
-
-assign(ROSLIB, require('./urdf'));
-
 module.exports = ROSLIB;

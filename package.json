@@ -6,9 +6,7 @@
   "license": "BSD-2-Clause",
   "main": "./build/roslib.js",
   "browser": {
-    "./src/RosLibNode.js": "./src/RosLib.js",
-    "ws": "./src/util/shim/WebSocket.js",
-    "xmldom": "./src/util/shim/xmldom.js"
+    "ws": "./src/util/shim/WebSocket.js"
   },
   "devDependencies": {
     "chai": "*",
@@ -34,10 +32,7 @@
     "cbor-js": "^0.1.0",
     "eventemitter2": "^6.4.0",
     "object-assign": "^4.0.1",
-    "socket.io": "^4.0.0",
-    "webworkify": "^1.5.0",
-    "ws": "^7.2.1",
-    "xmldom": "^0.6.0"
+    "webworkify": "^1.5.0"
   },
   "directories": {
     "example": "examples",
