@@ -18,13 +18,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v6
+      - run: corepack enable
       - uses: actions/setup-node@v6
         with:
           node-version: 22.x
           cache: yarn
           registry-url: https://registry.npmjs.org
-
-      - run: corepack enable
       - run: yarn install --immutable
       - run: yarn build
 
