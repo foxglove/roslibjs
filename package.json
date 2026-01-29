@@ -66,5 +66,6 @@
   "author": {
     "name": "Foxglove Technologies",
     "email": "support@foxglove.dev"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
