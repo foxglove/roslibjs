@@ -7,3 +7,4 @@ node_modules
 *.tar.gz
 build
 .DS_Store
+.yarn/*
