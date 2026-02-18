@@ -6,3 +6,5 @@ node_modules
 *.log
 *.tar.gz
 build
+.DS_Store
+.yarn/*
