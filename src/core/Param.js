@@ -27,8 +27,9 @@ function Param(options) {
  *  * value - the value of the param from ROS.
  */
 Param.prototype.get = function(callback) {
+  var ros = this.ros;
   var paramClient = new Service({
-    ros : this.ros,
+    ros : ros,
     name : '/rosapi/get_param',
     serviceType : 'rosapi/GetParam'
   });
@@ -38,8 +39,12 @@ Param.prototype.get = function(callback) {
   });
 
   paramClient.callService(request, function(result) {
-    var value = JSON.parse(result.value);
-    callback(value);
+    try {
+      var value = JSON.parse(result.value);
+      callback(value);
+    } catch (e) {
+      ros.emit('error', 'Failed to parse JSON param value: ' + e.message);
+    }
   });
 };
 

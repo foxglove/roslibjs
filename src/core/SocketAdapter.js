@@ -110,8 +110,12 @@ function SocketAdapter(client) {
         var decoded = CBOR.decode(data.data, typedArrayTagger);
         handleMessage(decoded);
       } else {
-        var message = JSON.parse(typeof data === 'string' ? data : data.data);
-        handleMessage(message);
+        try {
+          var message = JSON.parse(typeof data === 'string' ? data : data.data);
+          handleMessage(message);
+        } catch (e) {
+          client.emit('error', 'Failed to parse JSON rosbridge message: ' + e.message);
+        }
       }
     }
   };
